@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAURO RAMIREZ — PHOTOGRAPHY &amp; DIRECTION</title>
+  <meta name="description" content="Portfolio of Mauro Ramirez. Raw direct-flash fashion editorial, contemporary portraiture, street culture, and cinematic campaigns.">
+  
+  <!-- Google Fonts: Space Grotesk, Inter, and Instrument Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bgPrimary: '#080808',
+            bgSecondary: '#111111',
+            bgElevated: '#171717',
+            textPrimary: '#F5F3EF',
+            textSecondary: '#929292',
+            textMuted: '#525252',
+            borderSubtle: '#222222',
+            borderActive: '#333333',
+            accentRed: '#E61E2A',
+            accentYellow: '#E5FF00'
+          },
+          fontFamily: {
+            grotesk: ['"Space Grotesk"', 'sans-serif'],
+            serifItalic: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'sans-serif']
+          },
+          letterSpacing: {
+            tighter: '-0.04em',
+            tight: '-0.02em',
+            widestEditorial: '0.18em'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Modular Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bgPrimary text-textPrimary antialiased selection:bg-accentRed selection:text-white" id="top">
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- PERSISTENT HEADER -->
+  <header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent py-5 px-6 md:px-12 lg:px-16 flex items-center justify-between">
+    <!-- Left: Typographic Wordmark -->
+    <a href="#/" id="brand-link" class="group flex items-baseline gap-2.5 z-50 focus:outline-none">
+      <span class="font-grotesk font-bold text-xl md:text-2xl tracking-tighter text-textPrimary group-hover:text-accentRed transition-colors duration-200">
+        MAURO RAMIREZ
+      </span>
+      <span class="hidden sm:inline-block text-[10px] tracking-widest uppercase font-mono text-textMuted font-semibold">
+        [PARIS / NYC / CDMX]
+      </span>
+    </a>
+
+    <!-- Right: Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Main Navigation">
+      <a href="#/" id="nav-work" class="nav-item text-xs font-grotesk uppercase tracking-widest text-textPrimary hover:text-accentRed transition-colors duration-200 py-1 border-b-2 border-textPrimary">
+        WORK
+      </a>
+      <a href="#/about" id="nav-about" class="nav-item text-xs font-grotesk uppercase tracking-widest text-textSecondary hover:text-textPrimary transition-colors duration-200 py-1 border-b-2 border-transparent">
+        ABOUT
+      </a>
+      <a href="#/contact" id="nav-contact" class="nav-item text-xs font-grotesk uppercase tracking-widest text-textSecondary hover:text-textPrimary transition-colors duration-200 py-1 border-b-2 border-transparent">
+        CONTACT
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-textMuted hover:text-textPrimary transition-colors flex items-center gap-1">
+        <span>INSTAGRAM</span>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17"/>
+        </svg>
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button id="mobile-menu-btn" type="button" class="md:hidden z-50 p-2 text-textPrimary focus:outline-none flex items-center gap-2" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+      <span id="menu-text" class="text-xs font-grotesk tracking-widest font-semibold uppercase">MENU</span>
+      <span id="menu-icon" class="w-5 h-4 flex flex-col justify-between">
+        <span class="w-full h-0.5 bg-textPrimary transition-transform duration-300 origin-left"></span>
+        <span class="w-full h-0.5 bg-textPrimary transition-opacity duration-300"></span>
+        <span class="w-full h-0.5 bg-textPrimary transition-transform duration-300 origin-left"></span>
+      </span>
+    </button>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Drawer -->
+  <div id="mobile-nav" class="fixed inset-0 bg-bgPrimary z-40 hidden flex-col justify-between px-8 py-24 border-b border-borderSubtle md:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="flex flex-col gap-6 pt-8">
+      <span class="text-[11px] font-mono uppercase tracking-widest text-textMuted">INDEX / NAVIGATION</span>
+      <a href="#/" class="mobile-nav-link text-4xl font-grotesk font-bold tracking-tighter text-textPrimary hover:text-accentRed transition-colors">
+        01 / WORK
+      </a>
+      <a href="#/about" class="mobile-nav-link text-4xl font-grotesk font-bold tracking-tighter text-textPrimary hover:text-accentRed transition-colors">
+        02 / ABOUT
+      </a>
+      <a href="#/contact" class="mobile-nav-link text-4xl font-grotesk font-bold tracking-tighter text-textPrimary hover:text-accentRed transition-colors">
+        03 / CONTACT
+      </a>
+    </div>
+
+    <div class="pt-8 editorial-border-t flex flex-col gap-4 text-xs font-mono text-textSecondary">
+      <div class="flex justify-between items-center">
+        <span>LOCATIONS</span>
+        <span class="text-textPrimary">PARIS · NEW YORK · CDMX</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span>DIRECT COMMISSIONS</span>
+        <a href="mailto:studio@mauroramirez.com" class="text-textPrimary hover:underline">studio@mauroramirez.com</a>
+      </div>
+      <div class="flex justify-between items-center">
+        <span>INSTAGRAM</span>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-textPrimary hover:underline">@mauroramirez ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DYNAMIC VIEW CONTAINER -->
+  <main id="app-view">
+    <!-- Populated by js/app.js (Home, Project Detail, About, Contact, 404) -->
+  </main>
+
+  <!-- FULLSCREEN LIGHTBOX MODAL -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden flex-col justify-between p-4 md:p-8 lightbox-backdrop" role="dialog" aria-modal="true" aria-label="Fullscreen Image Viewer">
+    <div class="flex items-center justify-between z-10 w-full max-w-7xl mx-auto">
+      <div class="flex items-center gap-3">
+        <span id="lightbox-counter" class="text-xs font-mono tracking-widest text-textSecondary uppercase">01 / 06</span>
+        <span class="text-borderActive font-mono">|</span>
+        <span id="lightbox-project-title" class="text-xs font-grotesk uppercase tracking-wider text-textPrimary font-semibold truncate max-w-xs md:max-w-md">PROJECT</span>
+      </div>
+      <button id="lightbox-close" type="button" class="text-textSecondary hover:text-textPrimary p-2 focus:outline-none flex items-center gap-2 group" aria-label="Close fullscreen view">
+        <span class="text-[11px] font-mono tracking-widest uppercase group-hover:text-accentRed transition-colors">ESC / CLOSE</span>
+        <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="relative flex-1 flex items-center justify-center w-full max-w-7xl mx-auto my-4 overflow-hidden">
+      <button id="lightbox-prev" type="button" class="absolute left-2 md:left-6 z-20 p-3 bg-black/60 hover:bg-black/90 text-textPrimary border border-borderSubtle rounded-none hover:border-textPrimary transition-colors focus:outline-none" aria-label="Previous image">
+        <svg class="w-5 h-5 md:w-6 md:h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+
+      <div class="relative w-full h-full flex items-center justify-center p-2">
+        <img id="lightbox-img" src="" alt="Fullscreen photograph view" class="max-w-full max-h-[82vh] w-auto h-auto object-contain transition-opacity duration-200">
+      </div>
+
+      <button id="lightbox-next" type="button" class="absolute right-2 md:right-6 z-20 p-3 bg-black/60 hover:bg-black/90 text-textPrimary border border-borderSubtle rounded-none hover:border-textPrimary transition-colors focus:outline-none" aria-label="Next image">
+        <svg class="w-5 h-5 md:w-6 md:h-6 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-2 z-10 pt-2 editorial-border-t">
+      <p id="lightbox-caption" class="text-xs text-textSecondary font-sans tracking-wide">Image Caption</p>
+      <span class="text-[10px] font-mono text-textMuted tracking-widest uppercase hidden md:inline-block">USE ARROW KEYS OR SWIPE TO NAVIGATE</span>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="bg-bgSecondary editorial-border-t pt-16 pb-12 px-6 md:px-12 lg:px-16 text-textSecondary text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col gap-12">
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pb-10 editorial-border-b">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-textMuted block mb-2">STUDIO ARCHIVE</span>
+          <p class="font-grotesk text-2xl md:text-3xl font-bold tracking-tight text-textPrimary">
+            MAURO RAMIREZ
+          </p>
+          <p class="font-mono text-xs text-textSecondary mt-1">
+            PHOTOGRAPHY &amp; DIRECTION · PARIS / NYC / CDMX
+          </p>
+        </div>
+        <button id="footer-top-btn" type="button" class="btn-editorial py-2.5 px-5 flex items-center gap-2" aria-label="Return to top of page">
+          <span>BACK TO TOP</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 font-mono text-[11px]">
+        <div class="flex flex-wrap items-center gap-6">
+          <span id="copyright-year">© 2026 MAURO RAMIREZ.</span>
+          <span class="text-textMuted">ALL PHOTOGRAPHS PROTECTED UNDER INTERNATIONAL COPYRIGHT.</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="mailto:studio@mauroramirez.com" class="hover:text-textPrimary transition-colors">EMAIL</a>
+          <span class="text-borderActive">/</span>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors">INSTAGRAM</a>
+          <span class="text-borderActive">/</span>
+          <a href="#/about" class="hover:text-textPrimary transition-colors">CREDITS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODULAR SCRIPTS (Ordered: Config -> Data -> App) -->
+  <script src="js/config.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
