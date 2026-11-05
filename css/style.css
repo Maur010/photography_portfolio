@@ -1,0 +1,160 @@
+/* ==========================================================================
+   MAURO RAMIREZ — EDITORIAL PHOTOGRAPHY PORTFOLIO STYLES
+   ========================================================================== */
+
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #111111;
+  --bg-elevated: #171717;
+  --text-primary: #F5F3EF;
+  --text-secondary: #929292;
+  --text-muted: #525252;
+  --border-subtle: #222222;
+  --border-active: #333333;
+  --accent-red: #E61E2A;
+  --accent-yellow: #E5FF00;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography assignments */
+h1, h2, h3, h4, .font-display {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-serif-quote {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+}
+
+/* Custom subtle analog film grain overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.038;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Restrained, cinematic hover transitions */
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-target {
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  will-change: transform;
+}
+
+.img-zoom-container:hover .img-zoom-target {
+  transform: scale(1.03);
+}
+
+/* Editorial structural borders */
+.editorial-border-b {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.editorial-border-t {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.editorial-border-l {
+  border-left: 1px solid var(--border-subtle);
+}
+
+.editorial-border-r {
+  border-right: 1px solid var(--border-subtle);
+}
+
+/* Fluid typography rules */
+.text-hero-giant {
+  font-size: clamp(2.8rem, 8.5vw, 8.5rem);
+  line-height: 0.92;
+}
+
+.text-title-display {
+  font-size: clamp(2.2rem, 5.2vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.text-editorial-quote {
+  font-size: clamp(1.6rem, 3.8vw, 3.2rem);
+  line-height: 1.15;
+}
+
+/* Editorial custom buttons */
+.btn-editorial {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: transparent;
+  border: 1px solid #333333;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-editorial:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.btn-editorial-red {
+  border-color: var(--accent-red);
+  color: var(--text-primary);
+}
+
+.btn-editorial-red:hover {
+  background-color: var(--accent-red);
+  color: #FFFFFF;
+  border-color: var(--accent-red);
+}
+
+/* Lightbox backdrop */
+.lightbox-backdrop {
+  background-color: rgba(6, 6, 6, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+/* Accessible focus states */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible, 
+select:focus-visible, 
+textarea:focus-visible {
+  outline: 2px solid var(--accent-red);
+  outline-offset: 3px;
+}
+
+/* Prefers-reduced-motion compliance */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .img-zoom-target {
+    transform: none !important;
+  }
+}
